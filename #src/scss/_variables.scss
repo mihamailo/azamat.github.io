@@ -1,0 +1,140 @@
+.btn {
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  font-size: 30px;
+  line-height: 28px;
+  letter-spacing: 0.1em;
+  background: none;
+  display: inline-block;
+  padding: 18px 20px;
+  width: 362px;
+  color: #fff;
+  font-weight: 300;
+  transition: all 0.3s ease;
+  position: relative;
+  @media (max-width: 1300px) {
+    width: 270px;
+    padding: 16px 18px;
+  }
+  @media (max-width: 1030px) {
+    width: 240px;
+    padding: 14px 16px;
+    font-size: 25px;
+  }
+  &:after,
+  &:before {
+    transition: all 0.3s ease;
+    transform: translate(0, 40%);
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    @media (max-width: 1030px) {
+      width: 18px;
+      height: 24px;
+      content: "";
+    }
+  }
+  &::after {
+    content: url("../img/btn-decor-l.png");
+    left: -51px;
+    top: 22%;
+    @media (max-width: 1030px) {
+      background: url("../img/btn-decor-l.png");
+      background-size: cover;
+      left: -28px;
+      top: 20%;
+    }
+  }
+  &::before {
+    content: url("../img/btn-decor-r.png");
+    right: -49px;
+    top: 4%;
+    @media (max-width: 1030px) {
+      background: url("../img/btn-decor-r.png");
+      background-size: cover;
+      right: -29px;
+      top: 11%;
+    }
+  }
+  &:hover {
+    @media (min-width: $md3+px) {
+      border: transparent;
+      background: #ffe0a0;
+      color: #000000;
+      &:after,
+      &:before {
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.btn-light {
+  border-radius: 10px;
+  font-size: 30px;
+  font-weight: 700;
+
+  line-height: 28px;
+  letter-spacing: 0.1em;
+  background: #ffe0a0;
+  display: inline-block;
+  padding: 18px 20px;
+  width: 362px;
+
+  @media (max-width: 1300px) {
+    width: 270px;
+    padding: 16px 18px;
+  }
+  @media (max-width: 1030px) {
+    width: 240px;
+    padding: 14px 16px;
+    font-size: 25px;
+  }
+}
+
+.position-relative {
+  position: relative;
+}
+
+.text-dec {
+  // нужно задавать color для  элемента
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    color: inherit;
+    background-color: currentColor;
+  }
+}
+
+.hidden {
+  visibility: hidden !important;
+  opacity: 0;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.red-block {
+  background-color: $red;
+}
+
+.textblock {
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: 100;
+  @media (max-width: 1920px) {
+    font-size: 26 / 1920 * 100vw;
+    line-height: 32 / 1920 * 100vw;
+  }
+}
+
+.black-border {
+}
